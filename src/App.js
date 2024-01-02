@@ -1,16 +1,29 @@
 import { Header } from "./components/Header";
-import { MoviesList } from "./components/MoviesList";
-import { MoviesContainer } from "./styles/MoviesContainer";
+import {
+  Switch,
+  Route,
+  Link,
+  Routes,
+  BrowserRouter
+} from "react-router-dom";
+import { About } from "./views/About";
+import { Home } from "./views/Home";
+import { MovieDetaill } from "./views/MovieDetaill";
 
 
 function App() {
+
   return (
     <div className="App">
-     <Header/>
+     <BrowserRouter>
+        <Header />
 
-     <MoviesContainer>
-      <MoviesList movies={[]}  />
-     </MoviesContainer>
+        <Routes>
+        <Route path="/" element={<Home />} />{" "}
+        <Route path="/movie/:id" element={<MovieDetaill />} />{" "}
+        <Route path="/About" element={<About />} />
+        </Routes>
+        </BrowserRouter>
     </div>
   );
 }

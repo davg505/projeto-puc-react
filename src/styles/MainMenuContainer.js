@@ -3,10 +3,12 @@ import styled from "styled-components";
 export const MainMenuContainer = styled.nav`
         ul{
             list-style: none;
-            padding: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 20px;
+            
 
 
             li{
@@ -15,6 +17,7 @@ export const MainMenuContainer = styled.nav`
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                
             }
 
         }
